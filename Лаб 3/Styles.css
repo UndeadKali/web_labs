@@ -1,0 +1,241 @@
+body {
+    background-color: black;
+}
+
+.top_pan {
+    text-align: center;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.our_titles {
+    color: red;
+    margin-top: 100px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+#main {
+    margin: 40px;
+}
+
+.title {
+    font-size: 60px;
+}
+
+.header {
+    height: 20vh;
+}
+
+.header_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hreferences {
+    display: flex;
+}
+
+a {
+    color: red;
+}
+
+.hyper_references {
+    text-align: center;
+    width: 100%;
+    margin: 30px;
+    font-size: 26px;
+}
+
+.navigation_item a:hover {
+    text-decoration: none;
+}
+
+.navigation_item:first-child {
+    margin-left: 0;
+}
+
+.list_of_heroes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list_item {
+    width: 50%;
+    text-align: center;
+}
+
+.list_item:nth-child(n + 4) {
+    margin-top: 3%;
+}
+
+.heroe_name {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.another_heroes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.another_heroe {
+    width: 25%;
+    text-align: center;
+}
+
+.item_promo:nth-child(n + 5) {
+    margin-top: 3%;
+}
+
+.pic_another_hero {
+    width: 40%;
+}
+
+.pic_hero_img {
+    width: 30%;
+}
+
+@media screen and (max-width: 1280px) {
+    #main {
+        margin: 12px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .list_item {
+        width: 50%;
+    }
+
+    .list_item:nth-child(n + 3) {
+        margin-top: 3%;
+    }
+
+    .pic_another_hero {
+        width: 50%;
+    }
+
+    .pic_another_hero:nth-child(n + 3) {
+        margin-top: 3%;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+    .header_content {
+        display: inline;
+    }
+
+    .navigation {
+        margin-top: 3%;
+    }
+
+    .list_item {
+        width: 100%;
+    }
+
+    .list_item:hover img {
+        opacity: 40%;
+    }
+
+    .pic_another_hero:hover img {
+        opacity: 40%;
+    }
+
+    .list_item {
+        margin-top: 3%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .title {
+        font-size: 40px;
+    }
+
+    .pic_another_hero {
+        margin-top: 3%;
+        width: 150%;
+    }
+
+    .heroe_name {
+        margin-left: 40%;
+    }
+
+    .pic_hero_img {
+        margin-left: 40%;
+        width: 60%;
+    }
+
+    .our_titles {
+        margin-left: 25%;
+    }
+
+    .another_heroe{
+        margin-left: 10%;
+    }
+
+    .hreferences{
+        margin-left: 38%;
+    }
+
+    .another_heroes{
+        margin-left: 20%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .title {
+        font-size: 40px;
+    }
+
+    .pic_another_hero {
+        margin-top: 3%;
+        width: 260%;
+        margin-left: 50%;
+    }
+
+    .heroe_name {
+        margin-left: 70%;
+    }
+
+    .pic_hero_img {
+        margin-left: 60%;
+        width: 60%;
+    }
+
+    .our_titles {
+        margin-left: 40%;
+    }
+
+    .another_heroe{
+        margin-left: 10%;
+    }
+
+    .another_heroes{
+        margin-left: 40%;
+    }
+
+    .hreferences{
+        margin-left: 45%;
+    }
+}

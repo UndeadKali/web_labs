@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector('input').focus();
 })
 
+let switcher = true
+
 document.addEventListener("DOMContentLoaded", function () {
     let phoneInputs = document.querySelectorAll('input[data-tel-input]');
 
@@ -39,7 +41,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (["7", "8", "9"].indexOf(inputNumbersValue[0]) > -1) {
-            if (inputNumbersValue[0] === "9") inputNumbersValue = "7" + inputNumbersValue;
+
+            if (inputNumbersValue[0] === "9") {
+                inputNumbersValue = "7" + inputNumbersValue
+            }  else if (inputNumbersValue[0] === "8" && inputNumbersValue[1] !== "9" && inputNumbersValue[inputNumbersValue.length] === undefined && switcher) {
+                switcher = false
+                inputNumbersValue = "8" + inputNumbersValue
+                console.log(inputNumbersValue[inputNumbersValue.length])
+            }
             let firstSymbols = (inputNumbersValue[0] === "8") ? "8" : "+7";
             formattedInputValue = input.value = firstSymbols + " ";
             if (inputNumbersValue.length > 1) {
@@ -55,7 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 formattedInputValue += '-' + inputNumbersValue.substring(9, 11);
             }
         } else {
-            formattedInputValue = '+' + inputNumbersValue.substring(0, 16);
+            //Приводим к российскому формату все остальные номера
+            formattedInputValue = '+7';
         }
         input.value = formattedInputValue;
     };
